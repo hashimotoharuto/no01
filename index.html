@@ -3,129 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>橋本晴翔 | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-       
 </head>
 <body>
 
-    <header>
-        <h1>My Portfolio</h1>
-        <p>Made by Hashimoto Haruto</p>
+    <header class="hero">
+        <div class="hero-inner">
+            <p class="hero-subtitle">Portfolio Site</p>
+            <h1>橋本 晴翔</h1>
+            <p class="hero-lead">
+                北海道情報大学 経営情報学部 3年<br>
+                Javaを中心に基礎を学習中。Webアプリ制作を通して実装力を高めています。
+            </p>
+
+            <div class="hero-badges">
+                <span>Java</span>
+                <span>JavaScript</span>
+                <span>HTML / CSS</span>
+                <span>GitHub</span>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-        
-        <!-- プロフィール -->
-        <section>
-            <h2>Profile</h2>
-            <p>
-                北海道情報大学 経営情報学部 ３年<br> 橋本晴翔です<br>
-    
-                現在はJavaを中心に、コーディングの基礎を学習しています。<br>
-                将来はフロントエンドエンジニアやバックエンドエンジニアとして活躍したいと考えています。
-            </p>
-        </section>
+    <main class="container">
 
-        <!-- 使用できる言語・ツール -->
-        <section>
-            <h2>Languages & Tools</h2>
-            
-            <div class="tech-group">
-                <span class="tech-label">Languages</span>
-                <div class="tag-container">
-                    <span class="tech-tag">Java </span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">HTML5 / CSS3</span>
-                    
-                </div>
-            </div>
-
-            <div class="tech-group">
-                <span class="tech-label">Tools / Environment</span>
-                <div class="tag-container">
-                    <span class="tool-tag">Visual Studio Code</span>
-                    <span class="tool-tag">Eclipse</span>
-                    <span class="tool-tag">GitHub</span>
-                    
-                </div>
+        <section class="section">
+            <h2>プロフィール</h2>
+            <div class="profile-text">
+                <p>北海道情報大学 経営情報学部 3年の橋本晴翔です。</p>
+                <p>現在はJavaを中心に、HTML / CSS / JavaScript などを使いながらコーディングの基礎を学習しています。</p>
+                <p>将来はフロントエンドエンジニアやバックエンドエンジニアとして、学んできたことを生かせる仕事に携わりたいと考えています。</p>
             </div>
         </section>
 
-        <!-- 資格 -->
-        <section>
-            <h2>Qualifications</h2>
+        <section class="section">
+            <h2>制作実績</h2>
+            <p class="section-intro">学習の中で制作したアプリや取り組みをまとめています。</p>
+
+            <div class="works-grid">
+
+                <article class="work-card">
+                    <div class="work-card-header">
+                        <h3 class="work-title">todoリスト</h3>
+                        <span class="work-status">公開中</span>
+                    </div>
+                    <p class="work-tech">HTML / CSS / JavaScript</p>
+                    <p class="work-desc">
+                        カンバン方式のタスク管理アプリです。4段階の進捗管理バー、完了タスクの自動削除アニメーション、期日設定機能を実装しました。
+                    </p>
+                    <p class="work-note">
+                        現在はFirebaseの更新をしていないため、正常に使用できない状態です。
+                    </p>
+                    <a href="https://hashimotoharuto.github.io/no2/todo.html" class="work-link" target="_blank" rel="noopener noreferrer">
+                        アプリを見る
+                    </a>
+                </article>
+
+                <article class="work-card">
+                    <div class="work-card-header">
+                        <h3 class="work-title">単語カード</h3>
+                        <span class="work-status">公開中</span>
+                    </div>
+                    <p class="work-tech">HTML / CSS / JavaScript</p>
+                    <p class="work-desc">
+                        単語の表示、音声再生、正解・不正解の判定機能を実装した単語学習アプリです。
+                    </p>
+                    <p class="work-note">
+                        ローカル環境向けのため、端末間でのデータ同期には対応していません。
+                    </p>
+                    <a href="https://hashimotoharuto.github.io/my-portfolio-wardcard/" class="work-link" target="_blank" rel="noopener noreferrer">
+                        アプリを見る
+                    </a>
+                </article>
+
+                <article class="work-card">
+                    <div class="work-card-header">
+                        <h3 class="work-title">支出管理アプリ</h3>
+                        <span class="work-status">公開中</span>
+                    </div>
+                    <p class="work-tech">HTML / CSS / JavaScript</p>
+                    <p class="work-desc">
+                        可読性を意識して作成した支出管理アプリです。登録不要で、ブラウザだけで動作するシンプルな家計簿アプリとして制作しました。
+                    </p>
+                    <a href="https://hashimotoharuto.github.io/sisyutukanri/" class="work-link" target="_blank" rel="noopener noreferrer">
+                        アプリを見る
+                    </a>
+                </article>
+
+                <article class="work-card">
+                    <div class="work-card-header">
+                        <h3 class="work-title">山岡家金額計算アプリ</h3>
+                        <span class="work-status">公開中</span>
+                    </div>
+                    <p class="work-tech">HTML / CSS / JavaScript</p>
+                    <p class="work-desc">
+                        山岡家での食事金額を事前に計算できるアプリです。遊び要素としてガチャ機能も追加しています。
+                    </p>
+                    <a href="https://hashimotoharuto.github.io/yamaokaya-makanai/" class="work-link" target="_blank" rel="noopener noreferrer">
+                        アプリを見る
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>使用技術・ツール</h2>
+
+            <div class="skill-block">
+                <h3 class="skill-title">言語</h3>
+                <div class="tag-list">
+                    <span class="tag tag-blue">Java</span>
+                    <span class="tag tag-blue">JavaScript</span>
+                    <span class="tag tag-blue">HTML5 / CSS3</span>
+                </div>
+            </div>
+
+            <div class="skill-block">
+                <h3 class="skill-title">ツール・環境</h3>
+                <div class="tag-list">
+                    <span class="tag tag-navy">Visual Studio Code</span>
+                    <span class="tag tag-navy">Eclipse</span>
+                    <span class="tag tag-navy">GitHub</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>資格</h2>
             <table class="cert-table">
-                <tr>
-                    <td class="cert-date">2025.07</td>
-                    <td>普通自動車第一種運転免許</td>
-                </tr>
-                
-                <tr>
-                    <td class="cert-date">2025.11</td>
-                    <td>基本情報技術者試験</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td class="cert-date">2025.07</td>
+                        <td>普通自動車第一種運転免許</td>
+                    </tr>
+                    <tr>
+                        <td class="cert-date">2025.11</td>
+                        <td>基本情報技術者試験</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
 
-        <!-- 成果物 -->
-        <section>
-            <h2>Works</h2>
-            <p>制作物や学習の記録です。</p>
-
-            <div class="work-item">
-                <div class="work-title">todoリスト</div>
-                <p class="work-desc">
-                    HTML, CSS, JavaScriptで作成したカンバン方式のタスク管理アプリ<br>
-                    4段階の進捗管理バー、完了タスクの自動削除アニメーション、期日設定機能を実装しています。<br>
-                    現在はfirebaseの更新をしていないため、使用できなくなっています。
-                </p>
-                <a href="https://hashimotoharuto.github.io/no2/todo.html" class="work-link" target="_blank" rel="noopener noreferrer">アプリを見る &rarr;</a>
-            </div>
-
-            <div class="work-item">
-                <div class="work-title">単語カード</div>
-                <p class="work-desc">
-                    HTML, CSS, JavaScriptで作成した単語学習アプリ<br>
-                    単語の表示、音声再生、正解・不正解の判定機能を実装しています。<br>
-                    ローカル環境でのみ動作します。端末間でのデータ同期はできません。
-                    safariなどのブラウザから開いて使用してください！
-                </p>
-                <a href="https://hashimotoharuto.github.io/my-portfolio-wardcard/" class="work-link" target="_blank" rel="noopener noreferrer">アプリを見る &rarr;</a>
-            </div>
-
-            <div class="work-item">
-                <div class="work-title">支出管理アプリ</div>
-                <p class="work-desc">
-                    可読性を意識した支出管理アプリ <br>
-                    登録不要、ブラウザだけで動くシンプルで高機能な家計簿アプリです。
-                </p>
-                <a href="https://hashimotoharuto.github.io/sisyutukanri/" class="work-link" target="_blank" rel="noopener noreferrer">アプリを見る &rarr;</a>
-            </div>
-
-
-            <div class="work-item">
-                <div class="work-title">山岡家金額計算アプリ</div>
-                <p class="work-desc">
-                    山岡家の食事の金額を事前に計算するアプリです！
-                    ガチャ機能つけてみました
-                </p>
-                <a href="https://hashimotoharuto.github.io/yamaokaya-makanai/" class="work-link" target="_blank" rel="noopener noreferrer">アプリを見る &rarr;</a>
-            </div>
-            
+        <section class="section">
+            <h2>連絡先</h2>
+            <p>お問い合わせは以下のメールアドレスまでお願いします。</p>
+            <p>
+                <a href="mailto:haruto.work.mail@gmail.com" class="contact-link">
+                    haruto.work.mail@gmail.com
+                </a>
+            </p>
         </section>
 
-        <!-- 連絡先 -->
-        <section>
-            <h2>Contact</h2>
-            <p>お問い合わせは以下よりお願いします。</p>
-            <p>gmail:  haruto.work.mail@gmail.com</p>
-        </section>
-
-    </div>
+    </main>
 
     <footer>
-        &copy; 2025
+        &copy; 2025 Hashimoto Haruto
     </footer>
 
 </body>

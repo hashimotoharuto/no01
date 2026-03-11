@@ -1,115 +1,300 @@
- /* --- 基本設定 --- */
-        body {
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f7f6; /* 背景を少し落ち着いた色に */
-            line-height: 1.6;
-        }
+/* ===== 基本設定 ===== */
+* {
+    box-sizing: border-box;
+}
 
-        /* --- ヘッダー --- */
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; }
-        header p { margin-top: 10px; opacity: 0.9; font-weight: 300; }
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: #1f2937;
+    background:
+        radial-gradient(circle at top, rgba(59, 130, 246, 0.08), transparent 35%),
+        linear-gradient(180deg, #0f172a 0%, #111827 320px, #f3f6fb 320px, #eef2f7 100%);
+    line-height: 1.7;
+}
 
-        /* --- コンテナ（全体枠） --- */
-        .container {
-            max-width: 800px;
-            margin: -30px auto 40px; /* ヘッダーに少し重ねる */
-            padding: 0 20px;
-            position: relative;
-        }
-        
-        /* --- セクション共通デザイン --- */
-        section {
-            background: white;
-            padding: 40px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        
-        h2 {
-            border-left: 5px solid #3498db; /* 左側に青い線 */
-            padding-left: 15px;
-            margin-top: 0;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
+/* ===== ヒーロー ===== */
+.hero {
+    padding: 72px 20px 96px;
+    color: #ffffff;
+}
 
-        /* --- 言語・ツール（タグデザイン） --- */
-        .tech-group { margin-bottom: 15px; }
-        .tech-label { font-weight: bold; margin-bottom: 5px; display: block; font-size: 0.9rem; color: #7f8c8d; }
-        
-        .tag-container { display: flex; flex-wrap: wrap; gap: 10px; }
-        .tech-tag {
-            background: #e1f5fe; /* 薄い青 */
-            color: #0277bd;
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-        .tool-tag {
-            background: #f3e5f5; /* 薄い紫 */
-            color: #7b1fa2;
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
+.hero-inner {
+    max-width: 960px;
+    margin: 0 auto;
+}
 
-        /* --- 資格（テーブルデザイン） --- */
-        .cert-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .cert-table th, .cert-table td {
-            padding: 12px;
-            border-bottom: 1px solid #eee;
-            text-align: left;
-        }
-        .cert-date {
-            width: 120px;
-            color: #7f8c8d;
-            font-weight: bold;
-        }
+.hero-subtitle {
+    margin: 0 0 12px;
+    font-size: 0.9rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #93c5fd;
+}
 
-        /* --- 成果物 --- */
-        .work-item {
-            background: #fafafa;
-            border: 1px solid #eee;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            transition: transform 0.2s; /* ホバー時の動き */
-        }
-        .work-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .work-title { font-weight: bold; font-size: 1.2rem; margin-bottom: 5px; color: #2c3e50; }
-        .work-desc { font-size: 0.95rem; color: #555; }
-        .work-link { 
-            display: inline-block; 
-            margin-top: 10px; 
-            color: #3498db; 
-            text-decoration: none; 
-            font-weight: bold;
-        }
-        .work-link:hover { text-decoration: underline; }
+.hero h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
 
-        /* --- フッター --- */
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #95a5a6;
-            font-size: 0.8rem;
-        }
- 
+.hero-lead {
+    margin-top: 18px;
+    max-width: 720px;
+    font-size: 1.05rem;
+    color: #dbeafe;
+}
+
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.hero-badges span {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    color: #eff6ff;
+    font-size: 0.92rem;
+    backdrop-filter: blur(8px);
+}
+
+/* ===== コンテナ ===== */
+.container {
+    max-width: 960px;
+    margin: -36px auto 48px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== セクション共通 ===== */
+.section {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    padding: 36px;
+    margin-bottom: 24px;
+}
+
+.section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-left: 14px;
+    border-left: 5px solid #1d4ed8;
+    font-size: 1.5rem;
+    color: #0f172a;
+}
+
+.section-intro {
+    margin-top: -4px;
+    margin-bottom: 20px;
+    color: #475569;
+}
+
+.profile-text p {
+    margin: 0 0 12px;
+}
+
+/* ===== 制作実績 ===== */
+.works-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.work-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border: 1px solid #dbe7f5;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+    border-color: #93c5fd;
+}
+
+.work-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.work-title {
+    margin: 0;
+    font-size: 1.15rem;
+    color: #0f172a;
+}
+
+.work-status {
+    flex-shrink: 0;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.work-tech {
+    margin: 0 0 12px;
+    color: #334155;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.work-desc {
+    margin: 0 0 10px;
+    color: #334155;
+    font-size: 0.95rem;
+}
+
+.work-note {
+    margin: 0 0 14px;
+    font-size: 0.88rem;
+    color: #64748b;
+}
+
+.work-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #0f172a;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.work-link:hover {
+    background: #1e3a8a;
+    transform: translateY(-1px);
+}
+
+/* ===== スキル ===== */
+.skill-block + .skill-block {
+    margin-top: 20px;
+}
+
+.skill-title {
+    margin: 0 0 12px;
+    font-size: 1rem;
+    color: #334155;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 9px 14px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.tag-blue {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.tag-navy {
+    background: #dbeafe;
+    color: #1e3a8a;
+}
+
+/* ===== 資格 ===== */
+.cert-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cert-table td {
+    padding: 14px 8px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+.cert-date {
+    width: 120px;
+    color: #475569;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* ===== 連絡先 ===== */
+.contact-link {
+    color: #1d4ed8;
+    font-weight: 700;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== フッター ===== */
+footer {
+    text-align: center;
+    padding: 28px 20px 36px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 56px 20px 84px;
+    }
+
+    .container {
+        margin-top: -28px;
+    }
+
+    .section {
+        padding: 24px;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-lead {
+        font-size: 0.98rem;
+    }
+
+    .section h2 {
+        font-size: 1.3rem;
+    }
+
+    .hero-badges span,
+    .tag {
+        font-size: 0.85rem;
+    }
+}
